@@ -10,22 +10,11 @@ import java.io.Console
 import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity() {
-    private var screenHeight by Delegates.notNull<Int>()
-    private var screenWidth by Delegates.notNull<Int>()
-    private lateinit var maze : MazeModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // get screen dimensions
-        val metrics : DisplayMetrics = this.resources.displayMetrics
-        screenWidth = metrics.widthPixels
-        screenHeight = metrics.heightPixels
-
-        //get mazeModel obj
-        maze = MazeModel()
 
 
 
